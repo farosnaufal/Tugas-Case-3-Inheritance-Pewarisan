@@ -1,0 +1,22 @@
+public class MahasiswaNilai extends Mahasiswa {
+
+    public MahasiswaNilai(String nim, String nama, double nilai) {
+        super(nim, nama, nilai);
+    }
+
+    public String getGrade() {
+        if (nilai > 100 || nilai < 0) {
+            return "Input nilai anda salah";
+        } else if (nilai >= 80) {
+            return "A (Lulus)";
+        } else if (nilai >= 70) {
+            return "B (Lulus)";
+        } else if (nilai >= 60) {
+            return "C (Lulus)";
+        } else if (nilai >= 50) {
+            return "D (Tidak Lulus)";
+        } else {
+            return "E (Tidak Lulus)";
+        }
+    }
+}
