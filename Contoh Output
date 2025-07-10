@@ -1,0 +1,24 @@
+Masukkan jumlah mahasiswa: 2
+
+Mahasiswa ke-1
+NIM   : 12345
+Nama  : Rina
+Nilai : 85
+
+Mahasiswa ke-2
+NIM   : 12346
+Nama  : Budi
+Nilai : 72
+
+===== HASIL PENILAIAN =====
+NIM   : 12345
+Nama  : Rina
+Nilai : 85.0
+Grade : A (Lulus)
+--------------------------
+NIM   : 12346
+Nama  : Budi
+Nilai : 72.0
+Grade : B (Lulus)
+--------------------------
+Rata-rata Nilai: 78.50
