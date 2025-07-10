@@ -1,0 +1,42 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Masukkan jumlah mahasiswa: ");
+        int jumlah = input.nextInt();
+        input.nextLine(); // buang newline
+
+        MahasiswaNilai[] daftarMahasiswa = new MahasiswaNilai[jumlah];
+        double totalNilai = 0;
+
+        for (int i = 0; i < jumlah; i++) {
+            System.out.println("\nMahasiswa ke-" + (i + 1));
+            System.out.print("NIM   : ");
+            String nim = input.nextLine();
+
+            System.out.print("Nama  : ");
+            String nama = input.nextLine();
+
+            System.out.print("Nilai : ");
+            double nilai = input.nextDouble();
+            input.nextLine(); // buang newline
+
+            daftarMahasiswa[i] = new MahasiswaNilai(nim, nama, nilai);
+            totalNilai += nilai;
+        }
+
+        System.out.println("\n===== HASIL PENILAIAN =====");
+        for (MahasiswaNilai m : daftarMahasiswa) {
+            System.out.println("NIM   : " + m.getNim());
+            System.out.println("Nama  : " + m.getNama());
+            System.out.println("Nilai : " + m.getNilai());
+            System.out.println("Grade : " + m.getGrade());
+            System.out.println("--------------------------");
+        }
+
+        double rataRata = totalNilai / jumlah;
+        System.out.printf("Rata-rata Nilai: %.2f\n", rataRata);
+    }
+}
